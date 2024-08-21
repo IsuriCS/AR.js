@@ -6,26 +6,24 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs="sourceType: webcam;">
-
+      
       <!-- AR marker -->
       <a-marker preset="hiro">
-
-        <a-entity
-        id="dynamicModel"
-        gltf-model="./shiba.glb"
-        rotation="-90 0 0"
-        scale="1 1 1"
-        animation-mixer
-    />
-
         
-      
-
+        <a-entity
+          id="dynamicModel"
+          gltf-model="./shiba.glb"
+          rotation="-90 0 0"
+          scale="1 1 1"
+          animation-mixer
+          event-set__click="_event: click; rotation: 0 360 90"
+        ></a-entity>
+        
       </a-marker>
-
+      
       <!-- AR camera -->
       <a-entity camera></a-entity>
-
+      
     </a-scene>
-  </body>
+  </body>
 </html>
